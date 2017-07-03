@@ -1,0 +1,155 @@
+/*
+    BACKGROUND COLORS
+
+    mobile  : #bff
+    tablet  : #fcf
+    desktop : #ff9
+
+    BREAKPOINTS
+
+    tablet  : 700px
+    desktop : 1000px
+*/
+
+/*** Default Mobile Styles ****************************/
+body{
+    font-family: Lucida Sans Typewriter, Lucida Console, monaco, monospace;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+li {
+  background-color: #bff;
+  margin: .5em;
+  padding: 1em;
+  list-style: none;
+  border-radius: 3px;
+}
+
+.inner {
+  background-color: #bff;
+  padding: .5em;
+}
+
+.inner li {
+  background-color: white;
+  padding: .5em;
+  border-radius: 3px;
+}
+
+
+
+/**** Tablet Styles ***********************************/
+
+@media (min-width: 700px) {
+  li {
+    margin: .5em;
+    background-color: #fcf;
+    list-style: none;
+    border-radius: 3px;
+  }
+
+  body ul {
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    width: 100%;
+  }
+
+  body>ul>li:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    flex-basis: calc(50% - 3em);
+  }
+
+  body>ul>li:nth-child(2) {
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: calc(50% - 3em);
+  }
+
+  body>ul>li:nth-child(5) {
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: calc(50% - 3em);
+  }
+
+  body>ul>li:nth-child(6) {
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: calc(50% - 3em);
+  }
+
+  .inner {
+    background-color: #fcf;
+    padding: .5em;
+  }
+
+  .inner ul {
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 0;
+  }
+
+  .inner li {
+    background-color: white;
+    padding: .5em;
+    border-radius: 3px;
+    flex-basis: calc(50% - 2em);
+  }
+
+}
+
+/**** Desktop Styles ***********************************/
+
+@media (min-width: 1000px) {
+
+  body ul {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+  }
+
+  body>ul>li {
+    margin: .5em;
+    background-color: #ff9;
+    list-style: none;
+    border-radius: 3px;
+  }
+
+  .inner {
+    background-color: #ff9;
+    order: -1;
+    flex-basis: calc(100% - 2em);
+  }
+
+
+  .inner ul {
+    display: flex;
+    flex-flow: row;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+  }
+
+  .inner li {
+    background-color: white;
+    padding: 2em;
+    border-radius: 3px;
+    /*margin: 1em;*/
+  }
+
+  body ul li:not(.inner) {
+    flex-basis: calc(20% - 3em)
+  }
+}
